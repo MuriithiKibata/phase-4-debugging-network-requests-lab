@@ -62,12 +62,15 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: I noticed that I was getting a server error (500). Upon further investigation on the Chrome network I found that the error originated from the controller.
+  Thank God it only took me a second to track it dowm from there.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: For this one I was seriously lost. But anyways when I saw the error was, "Unexpected end of Json", I knew the problem was with the route.
+  Although I knew where the issue lay, it took me some time to realized I didn't need a custom route because likes were being incremented frontend and not backend. But thank God I still figured out the problem.
+  Toys wasn't being rendered as Json. 
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: I didn't need to thank God. I straight up noticed that destroy wasn't in resource's routes, just add it and tested.
